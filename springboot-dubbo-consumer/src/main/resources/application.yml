@@ -1,0 +1,9 @@
+server:
+  port: 8013
+dubbo:
+  application:
+    name: springboot-dubbo-mongo-demo_template-consumer_02
+  registry:
+    address: zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183
+  metadata-report:
+    address: zookeeper://127.0.0.1:2183

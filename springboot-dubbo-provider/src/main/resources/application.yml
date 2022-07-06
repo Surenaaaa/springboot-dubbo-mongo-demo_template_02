@@ -1,0 +1,50 @@
+# 服务端口
+server:
+  port: 8012
+
+dubbo:
+
+#   扫描service服务，相当于@EnableDubbo注解
+  scan:
+    base-packages: com.wayeal.service
+  #   应用名称
+  application:
+    name: springboot-dubbo-mongo-demo_template-provider_02
+
+#   注册地址
+  registry:
+    address: zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183
+
+  协议名称及端口号
+  protocol:
+    name: dubbo
+    port: 20885
+#  protocols:
+#    protocol1:
+#      id: dubbo1
+#      name: dubbo
+#      port: 20884
+#    protocol2:
+#      id: dubbo2
+#      name: dubbo
+#      port: 20885
+#    protocol3:
+#      id: dubbo3
+#      name: dubbo
+#      port: 20886
+#    protocol4:
+#      id: rest
+#      name: rest
+#      port: 20887
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183
+#  config-center:
+#    address: zookeeper://127.0.0.1:2181?backup=127.0.0.1:2182,127.0.0.1:2183
+
+#  mongo数据库
+spring:
+  data:
+    mongodb:
+      port: 27017
+      host: 127.0.0.1
+      database: springboot_demo
